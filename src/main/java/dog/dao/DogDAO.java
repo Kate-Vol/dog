@@ -7,9 +7,13 @@ import java.util.List;
 public interface DogDAO {
     List<Dog> getAllDogs();
 
-   void saveDog(Dog dog);
+    void saveDog(Dog dog);
 
-   Dog getDog(int id);
+    Dog getDog(int id);
 
-   void deleteDog(int id);
+    void deleteDog(int id);
+
+    Dog getNewDog();
+
+
 }

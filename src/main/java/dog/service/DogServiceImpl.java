@@ -37,4 +37,12 @@ public class DogServiceImpl implements DogService {
     public void deleteDog(int id) {
         dogDAO.deleteDog(id);
     }
+
+    @Override
+    @Transactional
+    public Dog getNewDogAndSave() {
+        Dog dog = dogDAO.getNewDog();
+        dogDAO.saveDog(dog);
+        return dog;
+    }
 }
